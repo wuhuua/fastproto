@@ -1,0 +1,14 @@
+package testproto;
+
+message HelloReq{
+  required string name = 1;
+  optional string msg = 2;
+}
+
+message HelloResp{
+  optional string msg = 2;
+}
+
+service HelloService{
+  rpc Hello(HelloReq) returns (HelloResp);
+}
